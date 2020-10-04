@@ -38,4 +38,10 @@
 
             // -Add the timeblock into the timeblock container
 
-var clickMeButton = document.getElementById("click-me")           
+document.addEventListener("click", function(e) {
+        e.preventDefault();
+        if ( e.target.matches("button"));
+});
+ 
+
+       
