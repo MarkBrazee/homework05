@@ -38,9 +38,10 @@
 
             // -Add the timeblock into the timeblock container
 
-document.addEventListener("click", function(e) {
+document.getElementbyId("click-me").addEventListener("click", function(e) {
         e.preventDefault();
-        if ( e.target.matches("button"));
+        var text= document.getElementById("text").value; localStorage.setItem("text", text);
+        console.log("text")
 });
  
 
