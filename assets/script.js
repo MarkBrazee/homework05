@@ -41,10 +41,20 @@
 
 // save user input in local storage
 
+function renderLastRegistered() {
+        var text = localStorage.getItem("text");
+
+// save user input in local storage
+
 document.getElementbyId("click-me").addEventListener("click", function(e) {
         e.preventDefault();
         var text= document.getElementById("text").value; localStorage.setItem("text", text);
-        console.log("text")
+        
+// retrieve user input from local storage
+
+        localStorage.setItem("text", text);
+        renderLastRegistered();
+
 });
 
 
@@ -55,15 +65,15 @@ document.getElementbyId("click-me").addEventListener("click", function(e) {
   //  ISO format
     // '2018-04-04T16:00:00.000Z'
     // If no date is supplied to days(), it assumes NOW
-    var defFormat = dayjs().format();
-    // You can make a variable for any date object you need
-    var garyBirthday = dayjs("1965-12-07T16:00:00.000Z")
-    var anyOldDay = dayjs("1995-06-07T16:00:00.000Z");
-    // You can format any date
-    var format1 = garyBirthday.format("YYYY, MM, DD");
-    // Determine if one date is after another
-    var isAfter = garyBirthday.isAfter(anyOldDay, 'hour');
-    console.log(isAfter);
+//     var defFormat = dayjs().format();
+//     // You can make a variable for any date object you need
+//     var garyBirthday = dayjs("1965-12-07T16:00:00.000Z")
+//     var anyOldDay = dayjs("1995-06-07T16:00:00.000Z");
+//     // You can format any date
+//     var format1 = garyBirthday.format("YYYY, MM, DD");
+//     // Determine if one date is after another
+//     var isAfter = garyBirthday.isAfter(anyOldDay, 'hour');
+//     console.log(isAfter);
 
 
 
